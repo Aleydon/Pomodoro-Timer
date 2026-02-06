@@ -21,7 +21,6 @@
 	},
 	"dependencies": {
 		"@eslint/js": "^9.31.0",
-		"@tailwindcss/vite": "^4.1.11",
 		"@testing-library/dom": "^10.4.0",
 		"caniuse-lite": "",
 		"clsx": "^2.1.1",
@@ -29,7 +28,6 @@
 		"react": "19.2.3",
 		"react-dom": "19.2.3",
 		"react-router": "^7.0.1",
-		"tailwindcss": "^4.1.11",
 		"typescript-eslint": "^8.37.0"
 	},
 	"devDependencies": {
@@ -73,7 +71,6 @@
 		"jest-environment-jsdom": "^29.4.0",
 		"lint-staged": "^15.2.10",
 		"prettier": "^3.3.3",
-		"prettier-plugin-tailwindcss": "^0.6.13",
 		"storybook": "^9.0.17",
 		"ts-jest": "^29.2.5",
 		"ts-node": "^10.9.2",
