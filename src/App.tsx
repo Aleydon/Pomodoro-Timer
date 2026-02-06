@@ -1,19 +1,25 @@
 import './styles/global.css';
 import './styles/theme.css';
 
-import { Timer } from 'lucide-react';
-
-import { Heading } from './components/Heading';
+import { Container } from './components/Container';
+import { Heading } from './components/Header';
 
 export function App() {
 	return (
 		<>
-			<Heading>
-				React{' '}
-				<button>
-					<Timer />
-				</button>
-			</Heading>
+			<Container>
+				<Heading>Example</Heading>
+				<section>Logo</section>
+			</Container>
+			<Container>
+				<section>Menu</section>
+			</Container>
+			<Container>
+				<section>Form</section>
+			</Container>
+			<Container>
+				<section>Footer</section>
+			</Container>
 		</>
 	);
 }
