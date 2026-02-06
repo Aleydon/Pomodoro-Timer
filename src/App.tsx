@@ -1,9 +1,12 @@
-import './index.css';
+import './styles/global.css';
+import './styles/theme.css';
+
+import { Heading } from './components/Heading';
 
 export function App() {
 	return (
-		<div>
-			<h2>Hello World</h2>
-		</div>
+		<>
+			<Heading />
+		</>
 	);
 }
