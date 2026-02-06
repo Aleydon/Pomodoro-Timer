@@ -3,22 +3,16 @@ import './styles/theme.css';
 
 import { Container } from './components/Container';
 import { Heading } from './components/Header';
+import { Logo } from './components/Logo';
 
 export function App() {
 	return (
 		<>
 			<Container>
-				<Heading>Example</Heading>
-				<section>Logo</section>
+				<Logo />
 			</Container>
 			<Container>
-				<section>Menu</section>
-			</Container>
-			<Container>
-				<section>Form</section>
-			</Container>
-			<Container>
-				<section>Footer</section>
+				<Heading>Menu</Heading>
 			</Container>
 		</>
 	);
