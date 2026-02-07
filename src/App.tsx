@@ -3,6 +3,7 @@ import './styles/theme.css';
 
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
+import { Input } from './components/Input';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 
@@ -21,8 +22,7 @@ export function App() {
 			<Container>
 				<form className="form" action="">
 					<div className="formRow">
-						<label htmlFor="taskInput">task</label>
-						<input type="text" id="taskInput" />
+						<Input label="Task" id="task" type="text" />
 					</div>
 					<div className="formRow">
 						<p>Lorem ipsum dolor sit amet.</p>
