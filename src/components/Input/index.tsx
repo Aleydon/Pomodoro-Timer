@@ -3,11 +3,11 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 	label: string;
 };
 
-export function Input({ id, label, type }: InputProps) {
+export function Input({ id, label, type, ...props }: InputProps) {
 	return (
 		<>
 			<label htmlFor={id}>{label}</label>
-			<input type={type} id={id} />
+			<input {...props} type={type} id={id} />
 		</>
 	);
 }
