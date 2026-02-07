@@ -18,6 +18,24 @@ export function App() {
 			<Container>
 				<CountDown />
 			</Container>
+			<Container>
+				<form className="form" action="">
+					<div className="formRow">
+						<label htmlFor="taskInput">task</label>
+						<input type="text" id="taskInput" />
+					</div>
+					<div className="formRow">
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
+					<div className="formRow">
+						<p>cycles</p>
+						<p>0 0 0 0 0 0</p>
+					</div>
+					<div className="formRow">
+						<button type="submit">Send</button>
+					</div>
+				</form>
+			</Container>
 		</>
 	);
 }
