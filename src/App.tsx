@@ -1,6 +1,9 @@
 import './styles/global.css';
 import './styles/theme.css';
 
+import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
+
+import { Button } from './components/Button';
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
 import { Cycles } from './components/Cycles';
@@ -37,7 +40,8 @@ export function App() {
 						<Cycles />
 					</div>
 					<div className="formRow">
-						<button type="submit">Send</button>
+						<Button type="submit" icon={<PlayCircleIcon />} />
+						<Button type="submit" icon={<StopCircleIcon />} color="red" />
 					</div>
 				</form>
 			</Container>
