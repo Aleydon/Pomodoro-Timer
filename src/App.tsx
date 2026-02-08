@@ -3,6 +3,7 @@ import './styles/theme.css';
 
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
+import { Cycles } from './components/Cycles';
 import { Input } from './components/Input';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
@@ -27,16 +28,13 @@ export function App() {
 							id="task"
 							type="text"
 							placeholder="Type anything"
-							defaultValue="Lorem ipsum dolor sit amet."
-							disabled
 						/>
 					</div>
 					<div className="formRow">
 						<p>Lorem ipsum dolor sit amet.</p>
 					</div>
 					<div className="formRow">
-						<p>cycles</p>
-						<p>0 0 0 0 0 0</p>
+						<Cycles />
 					</div>
 					<div className="formRow">
 						<button type="submit">Send</button>
