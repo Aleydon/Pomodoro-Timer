@@ -12,16 +12,25 @@ import styles from './styles.module.css';
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
-	const [theme, setTheme] = useState<AvailableThemes>('dark');
+	const [theme, setTheme] = useState<AvailableThemes>(() => {
+		const storedTheme = localStorage.getItem('theme') as AvailableThemes;
+		return storedTheme || 'dark';
+	});
 
 	useEffect(() => {
 		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
 	}, [theme]);
 
 	function handleTheme(e: React.MouseEvent<HTMLAnchorElement>) {
 		e.preventDefault();
 		setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
 	}
+
+	const nextThemeIcon = {
+		dark: <SunIcon />,
+		light: <MoonIcon />
+	};
 
 	return (
 		<nav className={styles.menu}>
@@ -56,7 +65,7 @@ export function Menu() {
 				aria-label="Change Theme"
 				onClick={handleTheme}
 			>
-				{theme === 'dark' ? <SunIcon size={24} /> : <MoonIcon size={24} />}
+				{nextThemeIcon[theme]}
 			</a>
 		</nav>
 	);
