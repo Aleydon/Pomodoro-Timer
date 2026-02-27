@@ -13,7 +13,7 @@ export function Home(props: HomeProps) {
 	return (
 		<MainTemplate>
 			<Container>
-				<CountDown {...props} />
+				<CountDown />
 			</Container>
 			<Container>
 				<Form {...props} />

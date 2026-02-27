@@ -1,4 +1,4 @@
-import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
+import { PlayCircleIcon } from 'lucide-react';
 
 import { HomeProps } from '@/pages/Home';
 
@@ -20,7 +20,6 @@ export function Form({ state }: HomeProps) {
 			</div>
 			<div className="formRow">
 				<Button type="submit" icon={<PlayCircleIcon />} />
-				<Button type="submit" icon={<StopCircleIcon />} color="red" />
 			</div>
 		</form>
 	);
