@@ -3,7 +3,7 @@ import { TaskStateProps } from '@/models/TaskStateModel';
 export const initialTaskState: TaskStateProps = {
 	tasks: {
 		id: '1',
-		title: 'Example Task',
+		title: '',
 		duration: 25,
 		startDate: Date.now(),
 		completedDate: null,
