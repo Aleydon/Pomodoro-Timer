@@ -1,7 +1,7 @@
 import { TaskModelProps } from './TaskModel';
 
 export type TaskStateProps = {
-	tasks: TaskModelProps;
+	tasks: TaskModelProps[];
 	secondsRemaining: number;
 	formatedSecondsRemaining: string;
 	activeTask: TaskModelProps | null;
