@@ -1,15 +1,17 @@
 import { TaskStateProps } from '@/models/TaskStateModel';
 
 export const initialTaskState: TaskStateProps = {
-	tasks: {
-		id: '1',
-		title: '',
-		duration: 25,
-		startDate: Date.now(),
-		completedDate: null,
-		interruptedDate: null,
-		type: 'workTime'
-	},
+	tasks: [
+		{
+			id: '1',
+			title: '',
+			duration: 25,
+			startDate: Date.now(),
+			completedDate: null,
+			interruptedDate: null,
+			type: 'workTime'
+		}
+	],
 	secondsRemaining: 0,
 	formatedSecondsRemaining: '00:00',
 	activeTask: null,
