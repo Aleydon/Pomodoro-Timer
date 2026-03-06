@@ -3,6 +3,7 @@ import { useRef } from 'react';
 
 import { useTaskContext } from '@/contexts/TaskContext/useTaskContext';
 import { TaskModelProps } from '@/models/TaskModel';
+import { formatSecondsToMinutes } from '@/utils/formatSecondsToMinutes';
 import { getNextCycle } from '@/utils/getNextCycle';
 import { getNextCycleType } from '@/utils/getNextCycleType';
 
@@ -44,7 +45,7 @@ export function Form() {
 				activeTask: newTask,
 				currentCycle: nextCycle,
 				secondsRemaining,
-				formatedSecondsRemaining: '00:00',
+				formatedSecondsRemaining: formatSecondsToMinutes(secondsRemaining),
 				tasks: [newTask],
 				config: {
 					...prev.config
