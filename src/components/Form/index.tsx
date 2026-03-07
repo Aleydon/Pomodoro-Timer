@@ -68,9 +68,12 @@ export function Form() {
 			<div className="formRow">
 				<p>The next interval is: {state.secondsRemaining} minutes</p>
 			</div>
-			<div className="formRow">
-				<Cycles />
-			</div>
+			{state.currentCycle > 0 && (
+				<div className="formRow">
+					<Cycles />
+				</div>
+			)}
+
 			<div className="formRow">
 				<Button type="submit" icon={<PlayCircleIcon />} />
 			</div>
