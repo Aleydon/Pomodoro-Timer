@@ -1,4 +1,4 @@
-import { PlayCircleIcon } from 'lucide-react';
+import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
 import { useRef } from 'react';
 
 import { useTaskContext } from '@/contexts/TaskContext/useTaskContext';
@@ -54,6 +54,17 @@ export function Form() {
 		});
 	}
 
+	function handleInterruptTask() {
+		setState(prev => {
+			return {
+				...prev,
+				activeTask: null,
+				secondsRemaining: 0,
+				formatedSecondsRemaining: '00:00'
+			};
+		});
+	}
+
 	return (
 		<form className="form" action="" onSubmit={handleCreateNewTask}>
 			<div className="formRow">
@@ -76,7 +87,25 @@ export function Form() {
 			)}
 
 			<div className="formRow">
-				<Button type="submit" icon={<PlayCircleIcon />} />
+				{!state.activeTask ? (
+					<Button
+						arial-label="Initiate a new task"
+						title="Initiate a new task"
+						type="submit"
+						key="startTask"
+						icon={<PlayCircleIcon />}
+					/>
+				) : (
+					<Button
+						arial-label="Stop task"
+						title="Stop current task"
+						type="button"
+						key="stopTask"
+						color="red"
+						icon={<StopCircleIcon />}
+						onClick={handleInterruptTask}
+					/>
+				)}
 			</div>
 		</form>
 	);
