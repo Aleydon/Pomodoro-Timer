@@ -63,6 +63,7 @@ export function Form() {
 					type="text"
 					placeholder="Type your task here"
 					ref={taskNameInput}
+					disabled={!!state.activeTask}
 				/>
 			</div>
 			<div className="formRow">
