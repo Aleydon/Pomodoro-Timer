@@ -60,7 +60,16 @@ export function Form() {
 				...prev,
 				activeTask: null,
 				secondsRemaining: 0,
-				formatedSecondsRemaining: '00:00'
+				formatedSecondsRemaining: '00:00',
+				tasks: prev.tasks.map(task => {
+					if (prev.activeTask && task.id === prev.activeTask?.id) {
+						return {
+							...task,
+							interruptedDate: Date.now()
+						};
+					}
+					return task;
+				}) as TaskModelProps[]
 			};
 		});
 	}
